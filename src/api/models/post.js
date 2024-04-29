@@ -13,7 +13,7 @@ const PostSchema = new mongoose.Schema({
   commentCount: Number,
   creationDate: Date,
   answerCount: Number,
-  tags: [],
+  tags: [String],
   ownerUserId: Number,
 });
 

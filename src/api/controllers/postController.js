@@ -1,6 +1,6 @@
 const Post = require('../models/post');
 
-// Funció per obtenir tots els usuaris
+// Funció per obtenir tots els posts
 exports.getAllPosts = async (req, res) => {
   try {
     const posts = await Post.find({});

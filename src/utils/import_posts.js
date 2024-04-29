@@ -1,23 +1,9 @@
 const fs = require('fs');
 const { XMLParser } = require('fast-xml-parser');
 const mongoose = require('mongoose');
-const config = require('../config/db'); // Make sure this is the correct path to your DB config
+const config = require('../config/db');
+const Post = require('../api/models/post');
 
-// Define the Mongoose schema for posts
-const PostSchema = new mongoose.Schema({
-  id: Number,
-  title: String,
-  score: Number,
-  viewCount: Number,
-  commentCount: Number,
-  creationDate: Date,
-  answerCount: Number,
-  tags: [String],
-  ownerUserId: Number
-});
-
-// Compile model from schema
-const Post = mongoose.model('Post', PostSchema);
 
 function processPost(post) {
   const processed = {
