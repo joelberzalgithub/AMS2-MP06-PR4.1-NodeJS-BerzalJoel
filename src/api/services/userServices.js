@@ -11,7 +11,7 @@ function calculateAverageAge(users) {
     // Converteix la data de naixement de l'usuari a un objecte `Date`.
     const birthDate = new Date(user.birthDate);
     // Calcula l'edat de l'usuari com la diferència entre l'any actual i l'any de naixement.
-    const age = new Date().getFullYear() - birthDate.getFullYear() + 1;
+    const age = new Date().getFullYear() - birthDate.getFullYear();
     // Afegeix l'edat de l'usuari actual al total acumulat.
     return acc + age;
   }, 0);
